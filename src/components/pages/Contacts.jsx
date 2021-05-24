@@ -1,24 +1,69 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Div = styled.h1`
+const Div = styled.div`
   height: 7rem;
 `;
 
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+const ContactImage = styled.img`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
-    background: rgb(194,194,194);
-    background: linear-gradient(90deg, rgba(194,194,194,1) 0%, rgba(204,205,209,1) 100%, rgba(0,212,255,1) 100%);
-`
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+
+  background: rgb(194, 194, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(194, 194, 194, 1) 0%,
+    rgba(204, 205, 209, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+`;
 
 const ClickWpp = styled.img`
-    width: 20rem;
-    height: auto;
-`
+  width: 20rem;
+  height: auto;
+
+
+  :hover {
+    transition: 0.5s;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 426px){
+    width: 17rem;
+  }
+`;
+
+const H1 = styled.h1`
+  {
+  padding: 1rem;
+  font-size: 2rem
+  }
+
+  @media (max-width: 426px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const H2 = styled.h2`
+  {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  }
+
+  @media (max-width: 321px) {
+      font-size: 1.3rem;
+    }
+  }
+  
+`;
 
 
 const Contact = () => {
@@ -26,36 +71,39 @@ const Contact = () => {
     <>
       <Div></Div>
       <Container>
-      <div>
-        <img src="contato.png" alt="Entre em contato" />
-      </div>
-      <h1>Telefone / Whatsapp</h1>
-      <h2>
-        (24) 99992-4922 <br />
-        (24) 99926-8775
-      </h2>
-      <a
-        href="https://api.whatsapp.com/send?phone=5524999924922&text=Ol%C3%A1%2C%20Brant%26Braga%20Constru%C3%A7%C3%B5es!%20Gostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AAs."
-        target={"_blank"}
-        rel="noopener noreferrer"
-      >
-        <ClickWpp src="whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="https://api.whatsapp.com/send?phone=5524998268775&text=Ol%C3%A1%2C%20Brant%26Braga%20Constru%C3%A7%C3%B5es!%20Gostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AAs."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-         <ClickWpp src="whatsapp.svg" alt="" />
-      </a>
-      <div>
-        <img src="E-mail.png" alt="Email" height="100px" />
-      </div>
-      <h1 class="email">E-mail</h1>
-      <p class="oemail">brantbragaconst@gmail.com</p>
-      <Link to="mailto:brantbragaconst@gmail.com" target="_blank">
-        Entre em contato via E-mail
-      </Link>
+        <div>
+          <ContactImage src="contato.png" alt="Entre em contato" />
+        </div>
+        <H1>Telefone / Whatsapp</H1>
+        <H2>
+          (24) 99992-4922 
+        </H2>
+        <H2>
+          (24) 99926-8775
+        </H2>
+        <a
+          href="https://api.whatsapp.com/send?phone=5524999924922&text=Ol%C3%A1%2C%20Brant%26Braga%20Constru%C3%A7%C3%B5es!%20Gostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AAs."
+          target={"_blank"}
+          rel="noopener noreferrer"
+        >
+          <ClickWpp src="whatsapp.svg" alt="" />
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5524998268775&text=Ol%C3%A1%2C%20Brant%26Braga%20Constru%C3%A7%C3%B5es!%20Gostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AAs."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ClickWpp src="whatsapp.svg" alt="" />
+        </a>
+        <H1>E-mail</H1>
+        <H2>brantbragaconst@gmail.com</H2>
+        <a
+          href="mailto:brantbragaconst@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="E-mail.png" alt="Email" height="100px" />
+        </a>
       </Container>
     </>
   );

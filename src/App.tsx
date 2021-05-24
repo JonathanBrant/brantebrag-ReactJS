@@ -5,12 +5,7 @@ import Home from "./components/pages/Home"
 import Login from './components/pages/Login';
 import Services from './components/pages/Services';
 
-import styled from "styled-components";
 import './Global.css'
-
-const Div = styled.div`
-  background: red;
-`
 
 function App() {
   return (

@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
-const Div = styled.h1 `
-    height: 7rem;
+const Div = styled.div`
+  height: 7rem;
 `
 
+const Container = styled.div`
+    top: 7rem;
+ `
 
 const Home = () => {
     return (
         <>
         <Div></Div>
-        <div></div>         
+        <Container>
+        <div>AAA</div>         
+        </Container>
         </>
     )
 }
