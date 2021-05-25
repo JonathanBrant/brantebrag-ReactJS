@@ -16,13 +16,8 @@ const StyledButton = styled.button`
 
   :hover {
     opacity: 0.9;
-    background: #7c9d7e;   
-  
-
-
+    background: #7c9d7e;
   }
-
-
 `;
 
 const Button = (props) => {

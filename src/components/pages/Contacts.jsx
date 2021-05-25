@@ -14,17 +14,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 80vh;
+  flex-direction: column
 
-  background: rgb(194, 194, 194);
-  background: linear-gradient(
-    90deg,
-    rgba(194, 194, 194, 1) 0%,
-    rgba(204, 205, 209, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-`;
+`
 
 const ClickWpp = styled.img`
   width: 20rem;
